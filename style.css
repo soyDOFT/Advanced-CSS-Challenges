@@ -6,6 +6,12 @@
 
 }
 
+.star-section {
+    display: grid;
+    background-color: blue;
+    grid-row-start: 1;
+}
+
 .black-tile {
     background: black;
 
@@ -14,5 +20,14 @@
 .white-tile {
     background: white;
     border: solid;
+}
 
+.six-star-row {
+    color: white;
+    font-size: 200px;
+}
+
+.five-star-row {
+    color: white;
+    font-size: 200px;
 }
