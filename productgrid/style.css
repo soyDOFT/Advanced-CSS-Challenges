@@ -1,15 +1,117 @@
-html,
+html {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #2d4a70;
+}
+
 body {
     padding: 0;
     margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    align-content: center;
+    text-align: center;
+    background-color: #333333;
+    color: white;
 }
 
 section {
     display: grid;
-    grid-template-columns: 4;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 0.5fr repeat(4, 1fr);
+    width: 50vw;
+    height: 100vh;
+    justify-content: center;
+    background-color: #dddddd;
+    border: solid 1px;
+    box-shadow: 0px 0px 30px black;
 }
 
 .product {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.product a:link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.product a:visited {
+    color: black;
+}
+
+.product__image {
+    width: 5vw;
+    margin: 5px;
+}
+
+.product__pricetag {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.product__description {
+    margin: 0;
+    text-align: center;
+}
+
+.product__details {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.product__details summary {
+    padding: 5px;
+    cursor: pointer;
+    border: solid 1px #2d4a70;
+    background-color: #333333;
+    color: white;
+}
+
+@media screen and (max-width: 320px) {
+    section {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 0.5fr repeat(3, 1fr);
+        width: 100vw;
+        height: 100vh;
+        justify-content: center;
+        background-color: #d1d1d1;
+        border: solid 5px;
+        overflow: auto;
+    }
+
+    .product__image {
+        width: 15vw;
+        margin: 5px;
+    }
+}
+
+@media screen and (min-width: 321px) and (max-width: 768px) {
+    section {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 0.2fr repeat(2, 1fr);
+        width: 100vw;
+        height: 100vh;
+        justify-content: center;
+        background-color: #d1d1d1;
+        border: solid 5px;
+        overflow: auto;
+    }
+
+    .product__image {
+        width: 20vw;
+        margin: 5px;
+        
+    }
 }
