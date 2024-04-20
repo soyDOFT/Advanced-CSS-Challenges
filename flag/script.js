@@ -4,7 +4,6 @@ const stars = document.querySelector(".stars");
 flag.addEventListener('click', changeTheme);
 
 function changeTheme() {
-    console.log(stars);
         stars.style.display = 'block';
 
     switch (num) {
@@ -58,5 +57,4 @@ function changeTheme() {
             num = 1;
             break;
     }
-    console.log(num);
 }
