@@ -26,6 +26,13 @@ main {
     border: solid 5px;
 }
 
+.stars {
+    display: none;
+    position: absolute;
+    width: 20vw;
+    height: 33vh;
+}
+
 .star-section {
     position: absolute;
     display: grid;
